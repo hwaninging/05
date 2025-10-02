@@ -1,26 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-// 5. 산술계산기 (switch로 한 것) 
+// 6. 숫자 맞추기 게임 
 int main(int argc, char *argv[])
 {
-  int a, b; //3가지변수 선언 및 scanf 선언 잘 해주기 
-  char op;  //연산자 
-  int result;  
-   
-  printf("enter the calculation: ");
-  scanf("%i %c %i", &a, &op, &b); //받는거  
-
-  switch(op)
+  int answer = 59;
+  int num;
+  int trial=0; //변수=0 
+  
+  do //반복문 (답을 못 맞춘 상황) 
   {
-            case '+':
-                 result = a+b;
-                 break;
-            case '-':
-                  result = a-b;
-                  break;
-   }      
-
-  printf(" = %i\n", result);
+      printf("Guess a number: ");
+      scanf("%d", &num);
+      
+      if(answer < num) //high 일때  
+      printf("high!\n");
+      else if ( answer > num) //low
+      printf("low!\n");
+      
+      trial++;
+      
+  }
+   while( answer != num); //조건식: 답이 맞지 않다 - 계속 반복되게 됨. 
+   printf("Congratulation! trials: %i\n", trial);
       
   system("PAUSE");	
   return 0;
