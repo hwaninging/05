@@ -9,12 +9,10 @@ int main(int argc, char *argv[])
   scanf("%d", &x);
   
    if (x>0) //x가 양수라는 조건식 
-      printf("양수입니다.\n");
-   else if (x<0)
-      printf("음수입니다.\n"); 
-   else if (x==0)
-      printf("0입니다.\n"); 
-  
+      printf("절대값은 %i 입니다.\n", x); //숫자 넣는 %i 
+   else
+      printf("절대값은 %i 입니다.\n", -x); 
+      
   system("PAUSE");	
   return 0;
 }
