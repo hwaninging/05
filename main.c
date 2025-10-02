@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-// 1. 양수/음수/0인지 판단. 
+// 2. 절대값 구하기 
 int main(int argc, char *argv[])
 {
   int x;
